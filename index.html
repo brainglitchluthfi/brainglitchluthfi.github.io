@@ -13,170 +13,137 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: black;
+  background: #0a0a0a;
   color: #eaeaea;
-  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* === VIDEO BACKGROUND === */
-.video-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  overflow: hidden;
-}
-
-.video-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7) contrast(1.1);
-}
-
-/* === DARK OVERLAY === */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: -2;
-}
-
-/* === LAYOUT === */
-.main {
-  min-height: 100vh;
+/* HERO */
+.hero {
+  min-height: 45vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 60px 20px;
 }
 
-/* === TEXT BOX === */
-.content {
-  max-width: 900px;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 50px 40px;
+.hero h1 {
+  font-size: 2rem;
+  letter-spacing: 0.45em;
 }
 
-/* === TEXT === */
-h1 {
-  font-size: 3rem;
-  letter-spacing: 0.35em;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 0.85rem;
-  opacity: 0.75;
-  margin-bottom: 40px;
-}
-
-.section-title {
-  color: #ff4d4d;
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  margin: 50px 0 20px;
-}
-
-p {
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-/* === GRID === */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.grid a,
-.grid div {
-  border: 1px solid rgba(255,255,255,0.25);
-  padding: 12px;
-  font-size: 0.75rem;
-  text-decoration: none;
-  color: #eaeaea;
-  background: rgba(0,0,0,0.35);
-}
-
-footer {
-  margin-top: 60px;
-  font-size: 0.7rem;
+.hero p {
+  margin-top: 14px;
+  font-size: 0.9rem;
   opacity: 0.6;
 }
 
-/* === MOBILE FIX === */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2.2rem;
-    letter-spacing: 0.25em;
-  }
+/* SECTION */
+.section {
+  padding: 80px 8vw;
+  text-align: center;
+}
 
-  .content {
-    padding: 40px 20px;
-  }
+.section h2 {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  color: #ff3b3b;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 18px;
+  backdrop-filter: blur(6px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+}
+
+/* VIDEO */
+.video {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 0.7rem;
+  opacity: 0.4;
 }
 </style>
 </head>
 
 <body>
 
-<!-- VIDEO BACKGROUND -->
-<div class="video-bg">
-  <video autoplay muted loop playsinline>
-    <source src="background.mp4" type="video/mp4">
-  </video>
+<!-- HERO -->
+<div class="hero">
+  <h1>BRAINGLITCH</h1>
+  <p>AI Film · Music Video · Experimental Visual</p>
 </div>
 
-<div class="overlay"></div>
+<!-- SHOWCASE -->
+<div class="section">
+  <h2>SHOWCASE</h2>
 
-<!-- CONTENT -->
-<div class="main">
-  <div class="content">
+  <div class="grid">
 
-    <div class="section-title">_SIGNAL_ACTIVE</div>
-    <h1>BRAINGLITCH</h1>
-    <div class="subtitle">AI Filmmaking · Experimental Cinema · Visual Art</div>
-
-    <div class="section-title">WHO IS BRAINGLITCH?</div>
-    <p>BRAINGLITCH is an experimental AI-driven visual entity created by Mukhtar Luthfi — a space where artificial intelligence meets cinematic intuition.</p>
-    <p>Focused on AI filmmaking, animation, and visual art, Brainglitch explores the boundaries of storytelling by transforming prompts into immersive cinematic worlds.</p>
-    <p>Each project exists as a controlled glitch between machine imagination and human emotion — pushing the evolving language of future cinema.</p>
-
-    <div class="section-title">_SIGNAL_ACCESS</div>
-    <div class="grid">
-      <a href="https://www.instagram.com/brain.glitch_ml" target="_blank">Instagram</a>
-      <a href="https://youtube.com/@begedluthfi" target="_blank">YouTube</a>
-      <a href="https://www.tiktok.com/@brainglitch_ml" target="_blank">TikTok</a>
-      <a href="https://x.com/brain_glit82035" target="_blank">X</a>
-      <a href="https://www.threads.com/@brain.glitch_ml" target="_blank">Threads</a>
-      <a href="https://www.facebook.com/share/1A8xZSr9fU/" target="_blank">Facebook</a>
-      <a href="https://www.reddit.com/u/brainglitchBG" target="_blank">Reddit</a>
+    <!-- FILM -->
+    <div class="card">
+      <h3>FILM</h3>
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/HReQQ72MBUY"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
-    <div class="section-title">_PARTNERSHIP</div>
-    <div class="grid">
-      <div>Higgsfield</div>
-      <div>Mureka</div>
-      <div>ImagineArt</div>
-      <div>Pollo AI</div>
-      <div>Wondershare</div>
-      <div>SkyReels</div>
-      <div>WaveSpeed AI</div>
+    <!-- MUSIC VIDEO -->
+    <div class="card">
+      <h3>MUSIC VIDEO</h3>
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/ZvvLTeGmHDM"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
-
-    <div class="section-title">_CONTACT</div>
-    <p>Send signal → <strong>brainglitch97@gmail.com</strong></p>
-
-    <footer>© 2025 BRAINGLITCH</footer>
 
   </div>
 </div>
+
+<footer>
+© 2025 BRAINGLITCH
+</footer>
 
 </body>
 </html>
